@@ -4,7 +4,6 @@ Feature: F04_Search | user can search using product name or sku
   Scenario Outline: user could search using product name
     Given user goes to home page
     When user enters <search_word> in search field
-    And user click on search button
     Then search results with <search_word> will displayed
 
     Examples:

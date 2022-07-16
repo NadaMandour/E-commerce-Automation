@@ -28,6 +28,8 @@ public class D04_searchStepDef {
         List<WebElement> serList = ser.searchList();
         for (int i = 0; i < serList.size(); i++) {
             System.out.println(" the option number " + i + " is: " + serList.get(i).getText());
+            if  (searchWord.contains("_")==false)
+            { soft.assertTrue(serList.get(i).getText().contains(searchWord),"item does not contain search word");}
         }
         int min = 0;
         int max = serList.size();
@@ -48,9 +50,10 @@ public class D04_searchStepDef {
             String sku = search;
 
             soft.assertTrue(ser.getSku().getText().contains(sku)," item selected did not have the same sku");
-        }
-        System.out.println(ser.getSku().getText()+" is the sku found");
+            System.out.println(ser.getSku().getText()+" is the sku found");
 
+        }
+soft.assertTrue(ser.serUrl().contains("nopCommerce demo store. Search "),"the search Url does not contain it");
     }
 
 

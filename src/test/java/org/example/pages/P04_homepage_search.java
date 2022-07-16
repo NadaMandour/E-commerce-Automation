@@ -29,16 +29,19 @@ public class P04_homepage_search {
 
     public WebElement getSku() {
         List<WebElement> elements = Hooks.driver.findElements(By.className("value"));
-        WebElement skuEle=elements.get(elements.size()-1);
+        WebElement skuEle = elements.get(elements.size() - 1);
         for (int i = 0; i < elements.size(); i++) {
-            if (elements.get(i).getAttribute("id").contains("sku")){
+            if (elements.get(i).getAttribute("id").contains("sku")) {
 
-            skuEle=  elements.get(i);}
+                skuEle = elements.get(i);
+            }
         }
-
-    return skuEle;
+        return skuEle;
     }
 
+    public String serUrl() {
+        return Hooks.driver.getCurrentUrl();
+    }
 }
 
 
