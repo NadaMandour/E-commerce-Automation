@@ -9,18 +9,15 @@ import java.util.List;
 public class P03_homePage {
 
 
-public WebElement logoBtn()
-{
-   return Hooks.driver.findElement(By.cssSelector("img[alt =\"nopCommerce demo store\"]"));
-}
+    public WebElement logoBtn() {
+        return Hooks.driver.findElement(By.cssSelector("img[alt =\"nopCommerce demo store\"]"));
+    }
 
-    public WebElement currencyBtn()
-    {
+    public WebElement currencyBtn() {
         return Hooks.driver.findElement(By.name("customerCurrency"));
     }
 
-    public List<WebElement> ProductPrice()
-    {
+    public List<WebElement> ProductPrice() {
         return Hooks.driver.findElements(By.className("actual-price"));
     }
 
