@@ -1,2 +1,5 @@
+file:src/main/resources/features/F08_wishlist.feature:9
+file:src/main/resources/features/F04_Search.feature:11:22
+file:src/main/resources/features/F07_followUs.feature:17
+file:src/main/resources/features/F06_homeSliders.feature:4:10
 file:src/main/resources/features/F02_Login.feature:11
-file:src/main/resources/features/F01_Register.feature:4

@@ -23,8 +23,12 @@ public class P04_homepage_search {
 
 
     public List<WebElement> searchList() {
-        return Hooks.driver.findElements(By.className("ui-menu-item-wrapper"));
-
+        //return Hooks.driver.findElements(By.className("ui-menu-item-wrapper"));
+        return Hooks.driver.findElements(By.className("product-title"));
+    }
+    public WebElement serEleBySku()
+    {
+        return Hooks.driver.findElement(By.className("product-title"));
     }
 
     public WebElement getSku() {
@@ -38,6 +42,8 @@ public class P04_homepage_search {
         }
         return skuEle;
     }
+
+
 
     public String serUrl() {
         return Hooks.driver.getCurrentUrl();
